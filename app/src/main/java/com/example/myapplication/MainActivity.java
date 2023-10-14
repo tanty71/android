@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         btnadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    Toast toast= Toast.makeText(MainActivity.this,"tasto premuto",Toast.LENGTH_LONG);
+                    Toast toast= Toast.makeText(MainActivity.this,"tasto premutooooo",Toast.LENGTH_LONG);
                     toast.show();
 
             }
