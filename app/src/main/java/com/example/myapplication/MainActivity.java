@@ -37,13 +37,11 @@ public class MainActivity extends AppCompatActivity {
         btnadd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                     Toast toast= Toast.makeText(MainActivity.this,"dati salvati",Toast.LENGTH_LONG);
                     toast.show();
                     db.save(testo.getEditableText().toString(),
                         "prova2",
                         "prova3");
-
             }
         });
 
@@ -53,13 +51,11 @@ public class MainActivity extends AppCompatActivity {
                 String oggetto = null;
                 Toast toast= Toast.makeText(MainActivity.this,"carico i dati",Toast.LENGTH_LONG);
                 toast.show();
-                Cursor crs=db.getAllRecords();
+                Cursor crs=db.query();
                 while(crs.moveToNext()){
                     oggetto=crs.getString(crs.getColumnIndex(DatabaseStrings.FIELD_SUBJECT)).toString();
                 }
-
                 label.setText(oggetto);
-
             }
         });
     }

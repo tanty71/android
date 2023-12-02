@@ -66,7 +66,6 @@ public class DbManager
             SQLiteDatabase db=dbhelper.getReadableDatabase();
             String sql = "SELECT * FROM " + DatabaseStrings.TBL_NAME;
             crs = db.rawQuery( sql, null);
-            //crs=db.query(DatabaseStrings.TBL_NAME, null, null, null, null, null, null, null);
         }
         catch(SQLiteException sqle)
         {
